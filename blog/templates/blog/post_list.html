@@ -7,11 +7,17 @@
     <h1><a href="/">Gachiblog</a></h1>
 </div>
 
+
+{% for post in posts %}
 <div>
-    <p>published: 14.06.2014, 12:14</p>
-    <h2><a href="">一番目の投稿</a></h2>
-    <p>楽しく生きたい </p>
+    <p>{{ post.publish_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text |linebreaksbr}}</p>
 </div>
+    
+{% endfor %}
+
+
 
 <div>
     <p>公開日: 2014/06/14, 12:14</p>
